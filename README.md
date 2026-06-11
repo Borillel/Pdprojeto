@@ -1,6 +1,5 @@
 # Pdprojeto
-Um trabalho da diciplina de arquitetura de computadores sobre padrões de projeto
-Chat GPT foi usado no codigo e texto para auxiliar a crianção e revisão
+Um trabalho da diciplina de arquitetura de computadores sobre padrões de projeto, ChatGPT foi usado no codigo e texto para auxiliar a crianção e revisão, os conteudos foram baseados no Refactoring guru em padrões de design
 
 # Padrão Decorator
 
