@@ -49,13 +49,8 @@ class Application:
         print(button.render())
 
 
-def main():
-    app = Application(WindowsFactory())
-    app.render()
+app = Application(WindowsFactory())
+app.render()
 
-    app = Application(MacFactory())
-    app.render()
-
-
-if __name__ == "__main__":
-    main()
+app = Application(MacFactory())
+app.render()

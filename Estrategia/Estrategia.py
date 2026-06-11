@@ -38,16 +38,11 @@ class ShoppingCart:
         print(self.strategy.pay(amount))
 
 
-def main():
-    cart = ShoppingCart(CreditCardStrategy())
-    cart.checkout(100)
+cart = ShoppingCart(CreditCardStrategy())
+cart.checkout(100)
 
-    cart.set_strategy(PixStrategy())
-    cart.checkout(100)
+cart.set_strategy(PixStrategy())
+cart.checkout(100)
 
-    cart.set_strategy(PayPalStrategy())
-    cart.checkout(100)
-
-
-if __name__ == "__main__":
-    main()
+cart.set_strategy(PayPalStrategy())
+cart.checkout(100)

@@ -26,12 +26,6 @@ class BeverageDecorator(Beverage):
     def __init__(self, beverage):
         self.beverage = beverage
 
-    def get_description(self):
-        return self.beverage.get_description()
-
-    def cost(self):
-        return self.beverage.cost()
-
 
 class Milk(BeverageDecorator):
 
@@ -60,16 +54,11 @@ class Chocolate(BeverageDecorator):
         return self.beverage.cost() + 2.0
 
 
-def main():
-    coffee = Coffee()
-    print(coffee.get_description(), "- R$", coffee.cost())
+coffee = Coffee()
+print(coffee.get_description(), "- R$", coffee.cost())
 
-    coffee = Milk(coffee)
-    coffee = Sugar(coffee)
-    coffee = Chocolate(coffee)
+coffee = Milk(coffee)
+coffee = Sugar(coffee)
+coffee = Chocolate(coffee)
 
-    print(coffee.get_description(), "- R$", coffee.cost())
-
-
-if __name__ == "__main__":
-    main()
+print(coffee.get_description(), "- R$", coffee.cost())
