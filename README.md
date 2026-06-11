@@ -15,6 +15,6 @@ A solução para o problema é utilizar o padrão "Abstract Factory", proporcion
 
 # Padrão Strategy
 
-O código implementa o padrão "Strategy", que serve para definir diferentes algoritmos e permitir que eles sejam trocados em tempo de execução sem alterar o código principal.
+O que código implementa o padrão "Strategy", que serve para definir diferentes algoritmos e permitir que eles sejam trocados em tempo de execução sem alterar o código principal.
 O problema apresentado é que existe um sistema de pagamento que pode realizar transações utilizando Cartão de Crédito, Pix, PayPal ou outros métodos. Sem o padrão Strategy seria necessário utilizar diversas estruturas condicionais para escolher a forma de pagamento.
 A solução para o problema é utilizar o padrão "Strategy", proporcionando a troca do método de pagamento dinamicamente, mantendo o código organizado e facilitando a adição de novas formas de pagamento no futuro.
