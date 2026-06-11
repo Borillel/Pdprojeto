@@ -9,7 +9,7 @@ from abc import ABC, abstractmethod
 
 # ============= COMPONENT ABSTRATO =============
 class Beverage(ABC):
-    """Componente abstrato - Bebida"""
+    """Bebida"""
     
     @abstractmethod
     def get_description(self) -> str:
@@ -22,7 +22,7 @@ class Beverage(ABC):
 
 # ============= CONCRETE COMPONENT =============
 class SimpleCoffee(Beverage):
-    """Componente concreto - Café Simples"""
+    """Café Simples"""
     
     def get_description(self) -> str:
         return "Café Simples"
@@ -32,7 +32,7 @@ class SimpleCoffee(Beverage):
 
 
 class SimpleChocolate(Beverage):
-    """Componente concreto - Chocolate Simples"""
+    """Chocolate Simples"""
     
     def get_description(self) -> str:
         return "Chocolate Simples"
@@ -43,7 +43,7 @@ class SimpleChocolate(Beverage):
 
 # ============= ABSTRACT DECORATOR =============
 class BeverageDecorator(Beverage):
-    """Decorator abstrato - Base para todos os decoradores"""
+    """Decorator abstrato - Base para todos os decoradores de bebidas"""
     
     def __init__(self, beverage: Beverage):
         self._beverage = beverage
@@ -59,7 +59,7 @@ class BeverageDecorator(Beverage):
 
 # ============= CONCRETE DECORATORS =============
 class Milk(BeverageDecorator):
-    """Decorator concreto - Adiciona Leite"""
+    """Adiciona Leite"""
     
     def get_description(self) -> str:
         return f"{self._beverage.get_description()} + Leite"
@@ -69,7 +69,7 @@ class Milk(BeverageDecorator):
 
 
 class Sugar(BeverageDecorator):
-    """Decorator concreto - Adiciona Açúcar"""
+    """Adiciona Açúcar"""
     
     def __init__(self, beverage: Beverage, quantity: int = 1):
         super().__init__(beverage)
@@ -84,7 +84,7 @@ class Sugar(BeverageDecorator):
 
 
 class Chocolate(BeverageDecorator):
-    """Decorator concreto - Adiciona Chocolate"""
+    """ Adiciona Chocolate"""
     
     def get_description(self) -> str:
         return f"{self._beverage.get_description()} + Chocolate"
@@ -94,7 +94,7 @@ class Chocolate(BeverageDecorator):
 
 
 class Caramel(BeverageDecorator):
-    """Decorator concreto - Adiciona Caramelo"""
+    """Adiciona Caramelo"""
     
     def get_description(self) -> str:
         return f"{self._beverage.get_description()} + Caramelo"
@@ -104,7 +104,7 @@ class Caramel(BeverageDecorator):
 
 
 class Whipped(BeverageDecorator):
-    """Decorator concreto - Adiciona Chantilly"""
+    """Adiciona Chantilly"""
     
     def get_description(self) -> str:
         return f"{self._beverage.get_description()} + Chantilly"
@@ -114,7 +114,7 @@ class Whipped(BeverageDecorator):
 
 
 class ExtraShot(BeverageDecorator):
-    """Decorator concreto - Adiciona Shot Extra de Café"""
+    """Adiciona Shot Extra de Café"""
     
     def get_description(self) -> str:
         return f"{self._beverage.get_description()} + Shot Extra"
