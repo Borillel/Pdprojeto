@@ -53,7 +53,3 @@ O padrão Strategy encapsula cada método de pagamento em uma estratégia indepe
 [**Referencia Strategy**](https://refactoring.guru/design-patterns/strategy)
 [**Referencia Strategy**](https://refactoring.guru/design-patterns/abstract-factory)
 [**Referencia ChatGPT**](https://chatgpt.com/pt-BR/)
-
-
-
-O padrão Strategy encapsula cada método de pagamento em uma estratégia independente. Dessa forma, o sistema pode trocar dinamicamente a forma de pagamento sem alterar sua lógica principal. Essa abordagem torna o código mais organizado, reduz o acoplamento e facilita a implementação de novos métodos de pagamento no futuro.
