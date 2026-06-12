@@ -1,20 +1,59 @@
-# Pdprojeto
-Um trabalho da diciplina de arquitetura de computadores sobre padrões de projeto, ChatGPT foi usado no codigo e texto para auxiliar a crianção e revisão, os conteudos foram baseados no Refactoring guru em padrões de design
+# Padrões de Projeto Implementados
+
+Este trabalho, desenvolvido na disciplina de Arquitetura de Computadores, apresenta a implementação de alguns padrões de projeto (Design Patterns). A ferramenta ChatGPT foi utilizada como apoio na criação, revisão e aprimoramento do código e da documentação. Os conceitos e exemplos utilizados tiveram como principal referência o material disponível no Refactoring Guru.
+
+---
 
 # Padrão Decorator
 
-O que código implementa o padrão "Decorator", que serve para adicionar funcionalidades a um objeto sem alterar sua classe original.
-O problema apresentado é que existe um café e é necessário adicionar leite, açúcar, chocolate e outros complementos sem criar uma nova classe para cada combinação possível.
-A solução para o problema é utilizar o padrão "Decorator", proporcionando a adição de funcionalidades dinamicamente, mantendo o código flexível e evitando a criação excessiva de classes.
+O código implementa o padrão de projeto Decorator, cujo objetivo é adicionar funcionalidades a um objeto de forma dinâmica, sem modificar sua estrutura original.
+
+- Problema
+
+Considere um sistema de gerenciamento de uma cafeteria. É necessário permitir que bebidas recebam diferentes complementos, como leite, açúcar, chocolate e chantilly. Sem a utilização do padrão Decorator, seria preciso criar uma nova classe para cada combinação possível de ingredientes, resultando em uma grande quantidade de classes e tornando o sistema difícil de manter.
+
+- Solução
+
+O padrão Decorator resolve esse problema permitindo que novos comportamentos sejam adicionados a um objeto em tempo de execução. Dessa forma, os complementos são aplicados dinamicamente à bebida, mantendo o código flexível, reutilizável e de fácil manutenção, além de evitar a criação excessiva de subclasses.
+
+---
 
 # Padrão Abstract Factory
 
-O que código implementa o padrão "Abstract Factory", que serve para criar famílias de objetos relacionados sem especificar diretamente suas classes concretas.
-O problema apresentado é que uma aplicação precisa criar componentes gráficos diferentes para cada sistema operacional, como Windows, Mac e Linux. Sem o padrão Abstract Factory, o código ficaria dependente de várias verificações para decidir qual componente criar.
-A solução para o problema é utilizar o padrão "Abstract Factory", proporcionando a criação dos componentes corretos para cada plataforma de forma transparente, mantendo o código desacoplado e facilitando a manutenção e expansão do sistema.
+O código implementa o padrão de projeto Abstract Factory, utilizado para criar famílias de objetos relacionados sem depender diretamente de suas classes concretas.
+
+- Problema
+
+Uma aplicação gráfica precisa funcionar em diferentes sistemas operacionais, como Windows, macOS e Linux. Cada plataforma possui seus próprios componentes de interface, como botões e caixas de seleção. Sem o padrão Abstract Factory, o código precisaria realizar diversas verificações condicionais para determinar quais componentes criar em cada situação.
+
+- Solução
+
+O padrão Abstract Factory fornece uma interface para a criação de objetos relacionados de forma consistente. Assim, a aplicação cria automaticamente os componentes adequados para cada sistema operacional sem conhecer suas implementações específicas. Isso reduz o acoplamento, melhora a organização do código e facilita futuras expansões e manutenções.
+
+---
 
 # Padrão Strategy
 
-O que código implementa o padrão "Strategy", que serve para definir diferentes algoritmos e permitir que eles sejam trocados em tempo de execução sem alterar o código principal.
-O problema apresentado é que existe um sistema de pagamento que pode realizar transações utilizando Cartão de Crédito, Pix, PayPal ou outros métodos. Sem o padrão Strategy seria necessário utilizar diversas estruturas condicionais para escolher a forma de pagamento.
-A solução para o problema é utilizar o padrão "Strategy", proporcionando a troca do método de pagamento dinamicamente, mantendo o código organizado e facilitando a adição de novas formas de pagamento no futuro.
+O código implementa o padrão de projeto Strategy, que permite definir diferentes algoritmos e alternar entre eles em tempo de execução.
+
+- Problema
+
+Um sistema de pagamentos deve oferecer suporte a diferentes métodos, como Cartão de Crédito, Pix, PayPal e outros. Sem a utilização do padrão Strategy, seria necessário empregar diversas estruturas condicionais para selecionar o método de pagamento adequado, tornando o código complexo e difícil de expandir.
+
+- Solução
+
+O padrão Strategy encapsula cada método de pagamento em uma estratégia independente. Dessa forma, o sistema pode trocar dinamicamente a forma de pagamento sem alterar sua lógica principal. Essa abordagem torna o código mais organizado, reduz o acoplamento e facilita a implementação de novos métodos de pagamento no futuro.
+
+---
+
+# Referencias
+
+[**Referencia Abstract Factory**](https://refactoring.guru/design-patterns/abstract-factory)
+[**Referencia Decorator**](https://refactoring.guru/design-patterns/decorator)
+[**Referencia Strategy**](https://refactoring.guru/design-patterns/strategy)
+[**Referencia Strategy**](https://refactoring.guru/design-patterns/abstract-factory)
+[**Referencia ChatGPT**](https://chatgpt.com/pt-BR/)
+
+
+
+O padrão Strategy encapsula cada método de pagamento em uma estratégia independente. Dessa forma, o sistema pode trocar dinamicamente a forma de pagamento sem alterar sua lógica principal. Essa abordagem torna o código mais organizado, reduz o acoplamento e facilita a implementação de novos métodos de pagamento no futuro.
